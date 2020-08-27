@@ -1,5 +1,5 @@
 package modelo;
 
-public class Inversionista {
-
+public interface Inversionista {
+    int invertir(int monto,Inversion inversion);
 }

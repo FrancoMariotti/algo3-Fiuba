@@ -3,14 +3,17 @@ package test;
 import modelo.Inversion;
 import modelo.InversionistaArriesgado;
 import modelo.InversionistaConservador;
+import modelo.PlazoFijo;
 
 public class PruebaSupremaDelSistema {
 	
 	public static void main(String[] args){
 		
-		System.out.println("Comienza la prueba...");
+		/*System.out.println("Comienza la prueba...");
 		
-		Inversion inversion0 = new Inversion(0);
+		Inversion  = new PlazoFijo();
+
+
 		Inversion inversion1 = new Inversion(1);
 
 		boolean pasoLaPrueba = true;
@@ -39,7 +42,7 @@ public class PruebaSupremaDelSistema {
 			System.out.println("¡¡¡¡ PRUEBA SUPERADA :)  !!!!");
 		}else{
 			System.out.println("Error en el sistema");
-		}
+		}*/
 	}
 	
 	
