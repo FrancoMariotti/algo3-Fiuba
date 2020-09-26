@@ -35,11 +35,20 @@ public class LetraTest {
     }
 
     @Test(expected = LongitudLetraException.class)
-    public void test03LetraNoPuedeTenerLongitudMayorAUno() {
+    public void test03LetraNoPuedeCrearseConLongitudMayorAUno() {
         List<Regla> reglas = new LinkedList<>();
         reglas.add(new ReglaLongitudLetra());
 
         Letra letra = new Letra("aorgeorjgoperjgoperjg",new Vocal(),4,reglas);
+    }
+
+    @Test(expected = PesoNegativoException.class)
+    public void test04LetraNoPuedeCrearseConPesoNegativo() {
+        List<Regla> reglas = new LinkedList<>();
+        reglas.add(new ReglaLongitudLetra());
+        reglas.add(new ReglaPesoLetra());
+
+        Letra letra = new Letra("a",new Vocal(),-4,reglas);
     }
 
 }

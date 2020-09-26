@@ -1,40 +1,15 @@
 public class Celda {
-    private boolean yaSeContabilizo;
+    private Letra letra;
+    private EstadoCelda estadoCelda;
 
-    private String letra;
-    private int pesoLetra;
-
-    public Celda() {
-
-        this.yaSeContabilizo = false;
-    }
-
-    public void setLetra(String letra) {
-    	
+    public Celda(Letra letra) {
         this.letra = letra;
-    }
-    
-    public void setPeso(int peso) {
-
-    	if (peso < 0 ) {
-    		System.out.println("El peso no puede ser negativo");
-    		return ;
-    	}
-    	this.pesoLetra = peso;
+        this.estadoCelda = new NoContabilizada();
     }
 
     public int getPesoLetra() {
-        int result = 0;
-
-
-        if (!this.yaSeContabilizo) {
-            this.yaSeContabilizo = true;
-            result = this.pesoLetra;
-        } else {
-            result = 0;
-        }
-
-        return result;
+        int resultado = estadoCelda.contar(letra);
+        estadoCelda = new Contabilizada();
+        return resultado;
     }
-
 }

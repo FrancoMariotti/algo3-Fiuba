@@ -2,26 +2,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Palabra {
-
-    public List<Celda> celdas;
+    private List<Celda> celdas;
 
     public Palabra() {
-
     	this.celdas = new ArrayList<Celda>();
     }
 
-
     public int puntaje() {
-
-        int result = 0;
-
-        for (Celda c : this.celdas) {
-        	
-    		result += c.getPesoLetra();
-
+        int puntaje = 0;
+        for (Celda celda : this.celdas) {
+    		puntaje += celda.getPesoLetra();
         }
 
-        return result;
+        return puntaje;
+    }
+
+    public void agregarCelda(Celda celda) {
+        celdas.add(celda);
     }
 }
  
